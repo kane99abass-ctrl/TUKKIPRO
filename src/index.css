@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600;1,700;1,900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --obsidian: #0D0D12;
+  --obsidian-deep: #07070A;
+  --champagne: #C9A84C;
+  --champagne-light: #E3C878;
+  --ivory: #FAF8F5;
+  --slate: #2A2A35;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--obsidian);
+  color: var(--ivory);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--obsidian);
+  color: var(--ivory);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================= SVG NOISE OVERLAY ================= */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+}
+
+/* ================= TYPOGRAPHY & PRESET B RULES ================= */
+.font-drama {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-mono-data {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.tracking-tight-tight {
+  letter-spacing: -0.035em;
+}
+
+/* ================= MICRO-INTERACTIONS OBLIGATOIRES ================= */
+/* Boutons avec feeling magnétique et glissement de fond */
+.btn-magnetic {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+  transform: translateZ(0);
+  cursor: pointer;
+}
+
+.btn-magnetic:hover {
+  transform: scale(1.03) translateZ(0);
+}
+
+.btn-magnetic:active {
+  transform: scale(0.98) translateZ(0);
+}
+
+.btn-magnetic-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(227, 200, 120, 0.95), rgba(201, 168, 76, 0.95));
+  transform: translateY(100%);
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 0;
+}
+
+.btn-magnetic:hover .btn-magnetic-layer {
+  transform: translateY(0);
+}
+
+.btn-magnetic-content {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Interactive lift pour liens et éléments cliquables */
+.interactive-lift {
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.2s ease, border-color 0.2s ease;
+}
+
+.interactive-lift:hover {
+  transform: translateY(-1px);
+}
+
+/* ================= CONTENEURS & RAYONS ================= */
+.luxury-container {
+  border-radius: 2.5rem;
+  border: 1px solid rgba(201, 168, 76, 0.18);
+  background: rgba(13, 13, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.luxury-card {
+  border-radius: 2rem;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  background: #12121A;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.luxury-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 168, 76, 0.45);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 30px -5px rgba(201, 168, 76, 0.25);
+}
+
+/* ================= ANIMATIONS CLÉS ================= */
+/* Laser scan pour Carte Protocole 02 */
+@keyframes laserSweep {
+  0% {
+    top: 0%;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.2;
+  }
+}
+
+.animate-laser {
+  animation: laserSweep 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Gyroscope rotation lente pour Carte Protocole 01 */
+@keyframes gyroRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-gyro {
+  animation: gyroRotate 24s linear infinite;
+}
+
+.animate-gyro-reverse {
+  animation: gyroRotate 16s linear infinite reverse;
+}
+
+/* Waveform ECG animation pour Carte Protocole 03 */
+@keyframes dashOffsetPulse {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -1000;
+  }
+}
+
+.animate-waveform {
+  stroke-dasharray: 400;
+  animation: dashOffsetPulse 4s linear infinite;
+}
+
+/* Cursor blink */
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-cursor {
+  animation: cursorBlink 0.9s infinite;
+}

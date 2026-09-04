@@ -1,0 +1,26 @@
+# Environnement et secrets
+.env
+credentials.json
+token.json
+
+# Données intermédiaires et temporaires
+tmp/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.pytest_cache/
+
+# Node / JS
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Scripts temporaires locaux
+setup_git.ps1
+push_to_github.ps1
