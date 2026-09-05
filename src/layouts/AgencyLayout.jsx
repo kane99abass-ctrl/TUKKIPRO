@@ -197,6 +197,27 @@ export default function AgencyLayout() {
           })}
         </nav>
 
+        {/* Widget CarryFlow "Boostez votre agence" */}
+        <div className="p-3">
+          <div className="p-4 rounded-2xl bg-gradient-to-br from-lime-50 via-yellow-50 to-teal-50 border border-teal-200/60 shadow-xs relative overflow-hidden">
+            <div className="flex items-center justify-between mb-1.5">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-teal-900 bg-white/80 px-2 py-0.5 rounded-full">
+                Pro Engine
+              </span>
+              <span className="text-teal-700 text-xs font-bold">⚡</span>
+            </div>
+            <h4 className="font-serif text-sm font-bold text-slate-900 leading-snug">Boostez votre agence</h4>
+            <p className="text-[11px] text-slate-600 mt-1 leading-snug">GDS direct, alertes WhatsApp et visas prioritaires.</p>
+            <Link
+              to="/app/parametres"
+              className="mt-2.5 w-full py-1.5 px-3 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-[11px] font-bold shadow-xs flex items-center justify-center gap-1 transition-all"
+            >
+              <span>Passer en Formule Pro</span>
+              <span>→</span>
+            </Link>
+          </div>
+        </div>
+
         {/* Footer Sidebar : Utilisateur & Déconnexion */}
         <div className="p-3 border-t border-slate-100">
           <div className="p-2.5 rounded-xl bg-slate-50 flex items-center justify-between">
@@ -226,10 +247,10 @@ export default function AgencyLayout() {
       {/* CONTENEUR PRINCIPAL */}
       <div className="flex-1 flex flex-col min-w-0">
         
-        {/* HEADER TOPBAR */}
-        <header className="h-16 bg-white border-b border-slate-200/80 sticky top-0 z-20 px-4 sm:px-6 flex items-center justify-between">
+        {/* HEADER TOPBAR ADAPTÉ CARRYFLOW */}
+        <header className="h-16 bg-white/95 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-20 px-3 sm:px-6 flex items-center justify-between shadow-xs">
           
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5 sm:gap-3">
             {/* Bouton mobile hamburger */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -240,11 +261,21 @@ export default function AgencyLayout() {
               </svg>
             </button>
 
+            {/* Logo Mobile */}
+            <div className="flex lg:hidden items-center gap-1.5">
+              <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-[#0F766E] to-emerald-500 flex items-center justify-center text-white font-bold text-xs shadow-xs">
+                T
+              </div>
+              <span className="font-bold text-sm tracking-tight text-slate-900">
+                Tukki<span className="text-[#F59E0B]">Pro</span>
+              </span>
+            </div>
+
             {/* Barre de recherche globale rapide */}
-            <div className="relative hidden sm:block w-72">
+            <div className="relative hidden sm:block w-64 md:w-80">
               <input
                 type="text"
-                placeholder="Rechercher dossier, client..."
+                placeholder="Rechercher dossier, visa, client..."
                 value={globalSearch}
                 onChange={(e) => setGlobalSearch(e.target.value)}
                 onKeyDown={handleGlobalSearch}
@@ -257,7 +288,20 @@ export default function AgencyLayout() {
           </div>
 
           {/* Actions rapides droite */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            
+            {/* Date Pill CarryFlow */}
+            <div className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200/90 text-xs font-semibold text-slate-700 shadow-2xs">
+              <span>📅</span>
+              <span>Septembre 2026</span>
+            </div>
+
+            {/* Avatars Stack CarryFlow */}
+            <div className="flex items-center -space-x-1.5">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80" alt="Elena" className="w-7 h-7 rounded-full ring-2 ring-white object-cover shadow-2xs" />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80" alt="Victor" className="w-7 h-7 rounded-full ring-2 ring-white object-cover shadow-2xs" />
+              <span className="w-7 h-7 rounded-full ring-2 ring-white bg-slate-100 text-slate-600 font-bold text-[10px] flex items-center justify-center shadow-2xs">+2</span>
+            </div>
 
             <Link
               to="/app/notifications"
@@ -273,12 +317,12 @@ export default function AgencyLayout() {
 
             <button
               onClick={handleLogout}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-700 transition-colors border border-slate-200/80 cursor-pointer"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-700 transition-colors border border-slate-200/80 cursor-pointer"
             >
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
               </svg>
-              <span>Déconnexion</span>
+              <span className="hidden sm:inline">Déconnexion</span>
             </button>
           </div>
 
@@ -318,11 +362,38 @@ export default function AgencyLayout() {
         )}
 
         {/* ZONE DE CONTENU PRINCIPALE */}
-        <main className="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl w-full mx-auto">
+        <main className="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl w-full mx-auto pb-24 lg:pb-8">
           <Outlet />
         </main>
 
       </div>
+
+      {/* BARRE DE NAVIGATION FLOTTANTE EN BAS POUR MOBILE (POUR ÉCRANS < 1024px) */}
+      <nav className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white/95 backdrop-blur-md border-t border-slate-200/85 px-2 py-2 flex items-center justify-around text-[10px] font-semibold text-slate-500 shadow-2xl">
+        <NavLink to="/app" end className={({isActive}) => `flex flex-col items-center gap-1 py-1 px-3 rounded-xl ${isActive ? 'text-[#0F766E] font-bold' : 'text-slate-500'}`}>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+          <span>Accueil</span>
+        </NavLink>
+        <NavLink to="/app/dossiers" className={({isActive}) => `flex flex-col items-center gap-1 py-1 px-3 rounded-xl relative ${isActive ? 'text-[#0F766E] font-bold' : 'text-slate-500'}`}>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z" /></svg>
+          <span>Dossiers</span>
+          <span className="absolute top-0.5 right-1.5 w-4 h-4 rounded-full bg-[#0F766E] text-white text-[8px] font-bold flex items-center justify-center">48</span>
+        </NavLink>
+        <NavLink to="/app/visas" className={({isActive}) => `flex flex-col items-center gap-1 py-1 px-3 rounded-xl relative ${isActive ? 'text-[#0F766E] font-bold' : 'text-slate-500'}`}>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
+          <span>Visas</span>
+          <span className="absolute top-0.5 right-1.5 w-4 h-4 rounded-full bg-amber-500 text-white text-[8px] font-bold flex items-center justify-center">3</span>
+        </NavLink>
+        <NavLink to="/app/student-visas" className={({isActive}) => `flex flex-col items-center gap-1 py-1 px-3 rounded-xl relative ${isActive ? 'text-[#0F766E] font-bold' : 'text-slate-500'}`}>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-5.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" /></svg>
+          <span>Études</span>
+          <span className="absolute top-0.5 right-1.5 w-4 h-4 rounded-full bg-emerald-600 text-white text-[8px] font-bold flex items-center justify-center">6</span>
+        </NavLink>
+        <button onClick={() => setIsMobileMenuOpen(true)} className="flex flex-col items-center gap-1 py-1 px-3 rounded-xl text-slate-500 hover:text-[#0F766E] cursor-pointer">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          <span>Menu</span>
+        </button>
+      </nav>
 
     </div>
   );
