@@ -503,6 +503,7 @@ export default function DashboardPage() {
             <span className="text-lg font-bold font-title text-rose-800">{studentActionsRequiredCount}</span>
             <span className="text-[10px] text-rose-700 block">à traiter</span>
           </div>
+        </div>
       </div>
 
       {/* ============================================================== */}
