@@ -231,8 +231,8 @@
         <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-600">
           <a href="#avantages" class="hover:text-tukki-teal transition-colors">Avantages</a>
           <a href="#apercu" class="hover:text-tukki-teal transition-colors">Aperçu direct</a>
-          <a href="#tarifs" class="hover:text-tukki-teal transition-colors">Tarifs en FCFA</a>
           <a href="#securite-donnees" class="hover:text-tukki-teal transition-colors">Sécurité & Données</a>
+          <a href="#tarifs" class="hover:text-tukki-teal transition-colors">Tarifs en FCFA</a>
           <a href="#cta-express" class="hover:text-tukki-teal transition-colors">Essai 14j</a>
         </nav>
 
@@ -254,8 +254,8 @@
       <div id="landing-mobile-menu" class="hidden mt-2 glass-card p-4 shadow-xl md:hidden space-y-2 text-xs font-semibold text-slate-700 border border-slate-200/80 animate-fade-scale">
         <a href="#avantages" onclick="closeLandingMobileMenu()" class="block px-3 py-2 rounded-xl hover:bg-slate-100/90 text-slate-700">Avantages & Valeur</a>
         <a href="#apercu" onclick="closeLandingMobileMenu()" class="block px-3 py-2 rounded-xl hover:bg-slate-100/90 text-slate-700">Aperçu direct & Démo</a>
+        <a href="#securite-donnees" onclick="closeLandingMobileMenu()" class="block px-3 py-2 rounded-xl hover:bg-slate-100/90 text-slate-700">Sécurité & Confidentialité</a>
         <a href="#tarifs" onclick="closeLandingMobileMenu()" class="block px-3 py-2 rounded-xl hover:bg-slate-100/90 text-slate-700">Tarifs en FCFA</a>
-        <a href="#securite-donnees" onclick="closeLandingMobileMenu()" class="block px-3 py-2 rounded-xl hover:bg-slate-100/90 text-slate-700">Sécurité & Données</a>
         <div class="pt-2 border-t border-slate-100 flex flex-col gap-2">
           <a href="#/app" onclick="closeLandingMobileMenu(); navigateToRoute('/app');" class="block w-full py-2.5 text-center font-bold text-tukki-teal bg-teal-50 rounded-xl">
             Accéder à l'espace démo agence →
@@ -311,10 +311,50 @@
           <span class="flex items-center gap-1.5"><span class="text-emerald-600 font-bold">✓</span> Sans carte bancaire</span>
           <span class="flex items-center gap-1.5"><span class="text-emerald-600 font-bold">✓</span> Support d'aide WhatsApp 7j/7</span>
         </div>
+
+        <!-- VISUEL AVION EN PLEIN VOL DANS LES AIRS (STYLE AÉRONAUTIQUE HAUTE FIDÉLITÉ) -->
+        <div class="pt-4 max-w-4xl mx-auto">
+          <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-2 border-white/90 group bg-slate-900">
+            <div class="relative h-60 sm:h-72 md:h-84 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1600&q=85" 
+                   alt="Avion de ligne moderne en plein vol dans les airs au-dessus des nuages baigné d'une lumière dorée" 
+                   class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <!-- Voile dégradé cinématographique pour texte & badges lisibles -->
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/25 to-transparent"></div>
+
+              <!-- Badges télémétrie vol en direct -->
+              <div class="absolute top-4 inset-x-4 flex items-center justify-between pointer-events-none">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-950/65 backdrop-blur-md border border-white/20 text-white text-xs font-semibold shadow-lg">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span>✈ Vol Régulier en vol • Dakar (DSS) ➔ Paris (CDG)</span>
+                </div>
+                <div class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-950/65 backdrop-blur-md border border-white/20 text-white text-xs font-mono font-medium shadow-lg">
+                  <span class="text-amber-400 font-bold">FL380</span> • 38 000 ft • 905 km/h
+                </div>
+              </div>
+
+              <!-- Bas de l'image avion avec titre élégant et action -->
+              <div class="absolute bottom-4 inset-x-4 sm:inset-x-6 flex flex-col sm:flex-row sm:items-end justify-between gap-3 text-left">
+                <div class="space-y-1">
+                  <span class="text-[11px] uppercase tracking-widest text-teal-300 font-bold block">Mobilité Aérienne & Visas Internationaux</span>
+                  <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-white tracking-tight drop-shadow-md">
+                    Chaque voyageur guidé, chaque vol maîtrisé.
+                  </h3>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <a href="#apercu" class="btn-fluent px-4 py-2 rounded-xl bg-white/95 hover:bg-white text-slate-900 text-xs font-bold shadow-lg transition-all flex items-center gap-1.5">
+                    <span>Aperçu des réservations</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- 3. LES 4 CARTES DÉPOLIES -->
+    <!-- 3. LES 4 CARTES DÉPOLIES (EXPÉRIENCE INTUITIVE ULTRA-FLUIDE) -->
     <section id="avantages" class="relative z-10 py-12 md:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#FAF8FF]">
       <div class="text-center max-w-2xl mx-auto mb-12">
         <span class="text-xs font-bold font-title uppercase tracking-wider text-tukki-teal block mb-2">EXPÉRIENCE INTUITIVE</span>
@@ -325,80 +365,84 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="glass-card p-7 flex flex-col justify-between group cursor-pointer" style="background: rgba(255, 255, 255, 0.78);">
+        <div class="glass-card p-7 flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-emerald-300/80 relative overflow-hidden" style="background: rgba(255, 255, 255, 0.82);">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-emerald-100/80 text-emerald-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100/80 text-emerald-700 flex items-center justify-center mb-6 group-hover:scale-115 group-hover:rotate-6 transition-all duration-300 shadow-sm">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold font-title text-slate-900 mb-3">
+            <h3 class="text-xl font-bold font-title text-slate-900 mb-3 group-hover:text-emerald-800 transition-colors">
               Fini les dossiers éparpillés
             </h3>
             <p class="text-slate-600 text-sm leading-relaxed">
               Plus de billets ou passeports perdus dans WhatsApp. Chaque client dispose d'une fiche complète, numérisée et instantanément accessible.
             </p>
           </div>
-          <div class="pt-6 mt-4 border-t border-slate-200/50 flex items-center text-xs font-semibold text-emerald-700">
+          <div class="pt-6 mt-4 border-t border-slate-200/50 flex items-center justify-between text-xs font-semibold text-emerald-700">
             <span>Classement 100% unifié</span>
+            <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </div>
         </div>
 
-        <div class="glass-card p-7 flex flex-col justify-between group cursor-pointer" style="background: rgba(255, 255, 255, 0.78);">
+        <div class="glass-card p-7 flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-amber-300/80 relative overflow-hidden" style="background: rgba(255, 255, 255, 0.82);">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-amber-100/80 text-amber-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-amber-100/80 text-amber-700 flex items-center justify-center mb-6 group-hover:scale-115 group-hover:rotate-6 transition-all duration-300 shadow-sm">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold font-title text-slate-900 mb-3">
+            <h3 class="text-xl font-bold font-title text-slate-900 mb-3 group-hover:text-amber-800 transition-colors">
               Transparence totale
             </h3>
             <p class="text-slate-600 text-sm leading-relaxed">
               Chaque agent sait exactement quel collègue a traité un visa, émis un billet ou encaissé un acompte. Plus aucune zone d'ombre.
             </p>
           </div>
-          <div class="pt-6 mt-4 border-t border-slate-200/50 flex items-center text-xs font-semibold text-amber-700">
+          <div class="pt-6 mt-4 border-t border-slate-200/50 flex items-center justify-between text-xs font-semibold text-amber-700">
             <span>Collaboration multi-agents</span>
+            <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </div>
         </div>
 
-        <div class="glass-card p-7 flex flex-col justify-between group cursor-pointer" style="background: rgba(255, 255, 255, 0.78);">
+        <div class="glass-card p-7 flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-indigo-300/80 relative overflow-hidden" style="background: rgba(255, 255, 255, 0.82);">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-indigo-100/80 text-indigo-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-100/80 text-indigo-700 flex items-center justify-center mb-6 group-hover:scale-115 group-hover:rotate-6 transition-all duration-300 shadow-sm">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold font-title text-slate-900 mb-3">
+            <h3 class="text-xl font-bold font-title text-slate-900 mb-3 group-hover:text-indigo-800 transition-colors">
               Zéro oubli & délais
             </h3>
             <p class="text-slate-600 text-sm leading-relaxed">
               Rappels automatiques avant l'expiration des options de vol et des dates de dépôt consulaire. Vous anticipez chaque étape sans stress.
             </p>
           </div>
-          <div class="pt-6 mt-4 border-t border-slate-200/50 flex items-center text-xs font-semibold text-indigo-700">
+          <div class="pt-6 mt-4 border-t border-slate-200/50 flex items-center justify-between text-xs font-semibold text-indigo-700">
             <span>Alertes prédictives</span>
+            <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </div>
         </div>
 
-        <div class="glass-card p-7 flex flex-col justify-between group cursor-pointer" style="background: rgba(255, 255, 255, 0.78);">
+        <div class="glass-card p-7 flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-rose-300/80 relative overflow-hidden" style="background: rgba(255, 255, 255, 0.82);">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-rose-100/80 text-rose-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-rose-100/80 text-rose-700 flex items-center justify-center mb-6 group-hover:scale-115 group-hover:rotate-6 transition-all duration-300 shadow-sm">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold font-title text-slate-900 mb-3">
+            <h3 class="text-xl font-bold font-title text-slate-900 mb-3 group-hover:text-rose-800 transition-colors">
               Audit complet & marges
             </h3>
             <p class="text-slate-600 text-sm leading-relaxed">
               Chaque paiement en FCFA, devis et acompte est tracé. Une gestion financière rigoureuse et transparente pour le dirigeant d'agence.
             </p>
           </div>
-          <div class="pt-6 mt-4 border-t border-slate-200/50 flex items-center text-xs font-semibold text-rose-700">
+          <div class="pt-6 mt-4 border-t border-slate-200/50 flex items-center justify-between text-xs font-semibold text-rose-700">
             <span>Clôtures journalières en 1 clic</span>
+            <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </div>
         </div>
 
@@ -552,7 +596,7 @@
       </div>
     </section>
 
-    <!-- 5. COMMENT ÇA MARCHE -->
+    <!-- 5. COMMENT ÇA MARCHE (SUIVEZ SANS STRESS EN 3 ÉTAPES FLUIDES) -->
     <section id="etapes" class="py-14 md:py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <span class="text-xs font-bold font-title uppercase tracking-wider text-tukki-teal block mb-2">PRISE EN MAIN EN 3 MINUTES</span>
@@ -562,25 +606,174 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="glass-card p-8 text-center flex flex-col items-center">
-          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 font-extrabold flex items-center justify-center text-lg mb-6 shadow-sm">1</div>
-          <h3 class="text-xl font-bold font-title text-slate-900 mb-2">Créez le dossier</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">Glissez-déposez le passeport et le billet ou notez le trajet. Le dossier voyageur est instantanément généré.</p>
+        
+        <!-- Étape 1 -->
+        <div class="glass-card p-8 text-center flex flex-col items-center justify-between group transition-all duration-300 hover:-translate-y-2.5 hover:shadow-2xl hover:border-emerald-300/80 relative overflow-hidden" style="background: rgba(255, 255, 255, 0.88);">
+          <div class="flex flex-col items-center">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-800 font-extrabold flex items-center justify-center text-xl mb-5 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 ring-4 ring-emerald-50">
+              1
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-bold mb-3 uppercase tracking-wider">
+              <span>⚡ En 30 secondes chrono</span>
+            </div>
+            <h3 class="text-xl font-bold font-title text-slate-900 mb-2 group-hover:text-emerald-800 transition-colors">
+              Créez le dossier
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Glissez-déposez le passeport et le billet ou notez le trajet. Le dossier voyageur est instantanément généré et classé.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 w-full text-xs font-semibold text-emerald-700 flex items-center justify-center gap-1">
+            <span>Numérisation intelligente</span>
+            <span class="material-symbols-outlined text-[15px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
         </div>
-        <div class="glass-card p-8 text-center flex flex-col items-center">
-          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 font-extrabold flex items-center justify-center text-lg mb-6 shadow-sm">2</div>
-          <h3 class="text-xl font-bold font-title text-slate-900 mb-2">Suivez sans stress</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">TukkiPro vous avertit avant l'expiration des time-limits et envoie des rappels WhatsApp cordiaux au client.</p>
+
+        <!-- Étape 2 : Suivez sans stress -->
+        <div class="glass-card p-8 text-center flex flex-col items-center justify-between group transition-all duration-300 hover:-translate-y-2.5 hover:shadow-2xl hover:border-amber-400 border-2 border-amber-200/70 relative overflow-hidden" style="background: rgba(255, 255, 255, 0.94);">
+          <div class="flex flex-col items-center">
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-900 font-extrabold flex items-center justify-center text-xl mb-5 shadow-sm group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 ring-4 ring-amber-50">
+              2
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100/80 border border-amber-300 text-amber-900 text-[10px] font-bold mb-3 uppercase tracking-wider">
+              <span>⏱ En 1 minute • Zéro oubli</span>
+            </div>
+            <h3 class="text-xl font-bold font-title text-slate-900 mb-2 group-hover:text-amber-800 transition-colors">
+              Suivez sans stress
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              TukkiPro vous avertit avant l'expiration des time-limits de vol et envoie des rappels WhatsApp cordiaux et automatiques au client.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 w-full text-xs font-semibold text-amber-800 flex items-center justify-center gap-1">
+            <span>Rappels & alertes WhatsApp</span>
+            <span class="material-symbols-outlined text-[15px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
         </div>
-        <div class="glass-card p-8 text-center flex flex-col items-center">
-          <div class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-800 font-extrabold flex items-center justify-center text-lg mb-6 shadow-sm">3</div>
-          <h3 class="text-xl font-bold font-title text-slate-900 mb-2">Encaissez & fidélisez</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">Générez une facture soignée, enregistrez les encaissements et fidélisez vos voyageurs d'une année sur l'autre.</p>
+
+        <!-- Étape 3 -->
+        <div class="glass-card p-8 text-center flex flex-col items-center justify-between group transition-all duration-300 hover:-translate-y-2.5 hover:shadow-2xl hover:border-teal-300/80 relative overflow-hidden" style="background: rgba(255, 255, 255, 0.88);">
+          <div class="flex flex-col items-center">
+            <div class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-900 font-extrabold flex items-center justify-center text-xl mb-5 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 ring-4 ring-teal-50">
+              3
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-[10px] font-bold mb-3 uppercase tracking-wider">
+              <span>💳 FCFA & Facture 1 clic</span>
+            </div>
+            <h3 class="text-xl font-bold font-title text-slate-900 mb-2 group-hover:text-teal-800 transition-colors">
+              Encaissez & fidélisez
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Générez une facture soignée, enregistrez les acomptes en FCFA et fidélisez vos voyageurs d'une année sur l'autre.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 w-full text-xs font-semibold text-tukki-teal flex items-center justify-center gap-1">
+            <span>Reçus & clôture immédiats</span>
+            <span class="material-symbols-outlined text-[15px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5.5. SECTION SÉCURITÉ & PROTECTION STRICTE DES DONNÉES (LES 4 PILIERS AVANT LES TARIFS) -->
+    <section id="securite-donnees" class="py-14 md:py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-[2.5rem] bg-gradient-to-br from-[#06382c] via-[#0a4e3d] to-[#04241c] text-white p-6 sm:p-10 lg:p-12 border border-emerald-400/30 shadow-[0_25px_60px_rgba(6,56,44,0.35)] relative overflow-hidden">
+        
+        <!-- Halos lumineux ambiants vert émeraude -->
+        <div class="absolute -top-28 -right-28 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-28 -left-28 w-96 h-96 bg-teal-300/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- En-tête concise et ultra-lisible -->
+        <div class="text-center max-w-2xl mx-auto mb-10 relative z-10">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-400/15 border border-emerald-400/30 text-emerald-200 text-xs font-semibold mb-3 shadow-inner">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            ARCHITECTURE SÉCURISÉE & CONFIDENTIELLE
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-title text-white tracking-tight">
+            Sécurité & Confidentialité Intransigeantes
+          </h2>
+          <p class="text-sm sm:text-base text-emerald-100 font-normal leading-relaxed mt-2.5">
+            Vos fiches passagers, visas consulaires et données d'agence sont protégés par des règles strictes gravées au cœur de notre base de données.
+          </p>
+        </div>
+
+        <!-- GRILLE DES 4 PILIERS DE CONFIDENTIALITÉ STRICTE -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">
+          
+          <!-- Pilier 1 : Invisibilité totale -->
+          <div class="group rounded-[1.8rem] bg-[#072d24]/90 hover:bg-[#09362b] border border-emerald-400/30 hover:border-emerald-400 p-5 sm:p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(16,185,129,0.3)] flex flex-col justify-between relative overflow-hidden">
+            <div>
+              <div class="w-11 h-11 rounded-xl bg-indigo-500/25 border border-indigo-400/40 text-indigo-300 flex items-center justify-center font-bold mb-4 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                <span class="material-symbols-outlined text-[22px]">visibility_off</span>
+              </div>
+              <h4 class="text-base font-bold font-title text-white mb-2">Invisibilité totale</h4>
+              <p class="text-xs sm:text-[13px] text-emerald-100 font-normal leading-relaxed">
+                Aucun autre utilisateur ne peut détecter, consulter ou soupçonner l'existence de vos dossiers. Votre espace est étanche et invisible au reste du monde.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-emerald-800/40 flex items-center gap-2 text-[11px] text-emerald-300 font-medium">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>Isolation réseau stricte</span>
+            </div>
+          </div>
+
+          <!-- Pilier 2 : Authentification stricte -->
+          <div class="group rounded-[1.8rem] bg-[#072d24]/90 hover:bg-[#09362b] border border-emerald-400/30 hover:border-emerald-400 p-5 sm:p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(16,185,129,0.3)] flex flex-col justify-between relative overflow-hidden">
+            <div>
+              <div class="w-11 h-11 rounded-xl bg-amber-500/25 border border-amber-400/40 text-amber-300 flex items-center justify-center font-bold mb-4 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                <span class="material-symbols-outlined text-[22px]">key</span>
+              </div>
+              <h4 class="text-base font-bold font-title text-white mb-2">Authentification stricte</h4>
+              <p class="text-xs sm:text-[13px] text-emerald-100 font-normal leading-relaxed">
+                Accès protégé par des protocoles chiffrés et des sessions temporisées. Sans identifiants vérifiés, toute tentative d'intrusion est bloquée net.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-emerald-800/40 flex items-center gap-2 text-[11px] text-amber-300 font-medium">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+              <span>Sessions infalsifiables</span>
+            </div>
+          </div>
+
+          <!-- Pilier 3 : 0 % de partage -->
+          <div class="group rounded-[1.8rem] bg-[#072d24]/90 hover:bg-[#09362b] border border-emerald-400/30 hover:border-emerald-400 p-5 sm:p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(16,185,129,0.3)] flex flex-col justify-between relative overflow-hidden">
+            <div>
+              <div class="w-11 h-11 rounded-xl bg-teal-400/25 border border-teal-400/40 text-teal-200 flex items-center justify-center font-bold mb-4 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                <span class="material-symbols-outlined text-[22px]">share_location</span>
+              </div>
+              <h4 class="text-base font-bold font-title text-white mb-2">0 % de partage</h4>
+              <p class="text-xs sm:text-[13px] text-emerald-100 font-normal leading-relaxed">
+                Vos fiches passagers, billets et contacts ne sont jamais mutualisés ni transmis à des tiers. Vos données restent strictement confinées à votre agence.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-emerald-800/40 flex items-center gap-2 text-[11px] text-teal-200 font-medium">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-300"></span>
+              <span>Zéro fuite ni partage</span>
+            </div>
+          </div>
+
+          <!-- Pilier 4 : 0 % de revente -->
+          <div class="group rounded-[1.8rem] bg-[#072d24]/90 hover:bg-[#09362b] border border-emerald-400/30 hover:border-emerald-400 p-5 sm:p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(16,185,129,0.3)] flex flex-col justify-between relative overflow-hidden">
+            <div>
+              <div class="w-11 h-11 rounded-xl bg-emerald-400/25 border border-emerald-400/40 text-emerald-300 flex items-center justify-center font-bold mb-4 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                <span class="material-symbols-outlined text-[22px]">verified_user</span>
+              </div>
+              <h4 class="text-base font-bold font-title text-white mb-2">0 % de revente</h4>
+              <p class="text-xs sm:text-[13px] text-emerald-100 font-normal leading-relaxed">
+                Vos bases clients et chiffres d'affaires ne font l'objet d'aucun profilage commercial ni revente. Ce que vous enregistrez reste votre propriété absolue.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-emerald-800/40 flex items-center gap-2 text-[11px] text-emerald-300 font-medium">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>Propriété 100% agence</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- 6. TARIFS -->
+    <!-- 6. TARIFS (INVESTISSEMENT RENTABLE) -->
     <section id="tarifs" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <span class="text-xs font-bold font-title uppercase tracking-wider text-tukki-teal block mb-2">INVESTISSEMENT RENTABLE</span>
@@ -595,7 +788,7 @@
             <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2">AGENCE INDÉPENDANTE</span>
             <h3 class="text-2xl font-bold font-title text-slate-900 mb-2">Essentiel</h3>
             <div class="mb-6">
-              <span class="text-4xl font-extrabold text-slate-900">35 000</span>
+              <span class="text-4xl font-extrabold text-slate-900 font-editorial">35 000</span>
               <span class="text-xs font-semibold text-slate-500"> FCFA / mois</span>
             </div>
             <ul class="space-y-3 text-sm text-slate-600 mb-8">
@@ -616,7 +809,7 @@
             <span class="text-xs font-bold text-emerald-800 uppercase tracking-wider block mb-2">AGENCE EN EXPANSION</span>
             <h3 class="text-2xl font-bold font-title text-slate-900 mb-2">Pro</h3>
             <div class="mb-6">
-              <span class="text-4xl font-extrabold text-tukki-teal">75 000</span>
+              <span class="text-4xl font-extrabold text-tukki-teal font-editorial">75 000</span>
               <span class="text-xs font-semibold text-slate-500"> FCFA / mois</span>
             </div>
             <ul class="space-y-3 text-sm text-slate-700 mb-8 font-medium">
@@ -634,7 +827,7 @@
             <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2">RÉSEAUX & VOYAGISTES</span>
             <h3 class="text-2xl font-bold font-title text-slate-900 mb-2">Entreprise</h3>
             <div class="mb-6">
-              <span class="text-3xl font-extrabold text-slate-900">Sur mesure</span>
+              <span class="text-3xl font-extrabold text-slate-900 font-editorial">Sur mesure</span>
             </div>
             <ul class="space-y-3 text-sm text-slate-600 mb-8">
               <li class="flex items-center gap-2"><span class="text-tukki-teal font-bold">✓</span> Succursales illimitées</li>
@@ -645,173 +838,6 @@
             Demander un devis
           </button>
         </div>
-      </div>
-    </section>
-
-    <!-- 6.5. SECTION SÉCURITÉ & PROTECTION STRICTE DES DONNÉES -->
-    <section id="securite-donnees" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Conteneur global avec fond vert fondu riche et halos lumineux -->
-      <div class="rounded-[3rem] bg-gradient-to-br from-[#06382c] via-[#0a4e3d] to-[#04241c] text-white p-6 sm:p-10 lg:p-12 border border-emerald-400/30 shadow-[0_25px_60px_rgba(6,56,44,0.35)] relative overflow-hidden">
-        
-        <!-- Halos lumineux ambiants vert émeraude -->
-        <div class="absolute -top-28 -right-28 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-28 -left-28 w-96 h-96 bg-teal-300/15 rounded-full blur-3xl pointer-events-none"></div>
-
-        <!-- En-tête concise et ultra-lisible -->
-        <div class="text-center max-w-2xl mx-auto mb-10 relative z-10">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-400/15 border border-emerald-400/30 text-emerald-200 text-xs font-semibold mb-3 shadow-inner">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            ARCHITECTURE SÉCURISÉE & CONFIDENTIELLE
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold font-title text-white tracking-tight">
-            Sécurité & Confidentialité Intransigeantes
-          </h2>
-          <p class="text-sm sm:text-base text-emerald-100 font-normal leading-relaxed mt-2.5">
-            Vos fiches passagers, visas consulaires et données d'agence sont protégés par des règles strictes gravées au cœur de notre base de données.
-          </p>
-        </div>
-
-        <!-- DISPOSITION NOUVELLE : Case Maîtresse Pleine Largeur + 4 Colonnes Spécialisées -->
-        <div class="space-y-5 relative z-10">
-          
-          <!-- CASE MAÎTRESSE 1 : Cloisonnement absolu des comptes (Interactive avec animation) -->
-          <div class="group rounded-[2.2rem] bg-[#072d24]/90 hover:bg-[#09362b] border border-emerald-400/30 hover:border-emerald-400 p-6 sm:p-8 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_35px_rgba(16,185,129,0.25)] relative overflow-hidden">
-            <!-- Reflet lumineux au survol -->
-            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-400/5 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-              
-              <!-- Côté gauche : Titre & Explication claire -->
-              <div class="lg:col-span-7 space-y-3.5">
-                <div class="flex items-center gap-3.5">
-                  <div class="w-12 h-12 rounded-2xl bg-emerald-400/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center font-bold shadow-inner group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shrink-0">
-                    <span class="material-symbols-outlined text-[26px]">lock</span>
-                  </div>
-                  <div>
-                    <span class="text-[11px] font-mono font-bold tracking-wider text-emerald-300 uppercase block">Pilier Fondamental</span>
-                    <h3 class="text-xl sm:text-2xl font-bold font-title text-white tracking-tight">
-                      Cloisonnement absolu des comptes
-                    </h3>
-                  </div>
-                </div>
-                <p class="text-sm text-emerald-100 leading-relaxed font-normal">
-                  Techniquement, il est <strong class="text-white font-semibold">impossible pour un autre utilisateur ou une agence concurrente</strong> d'accéder à vos dossiers. Chaque espace est isolé et verrouillé au niveau du moteur de données, et non par un simple filtre d'affichage.
-                </p>
-              </div>
-
-              <!-- Côté droit : 3 Puces de garantie interactives -->
-              <div class="lg:col-span-5 flex flex-col gap-2.5">
-                <div class="p-3 rounded-xl bg-emerald-950/60 hover:bg-emerald-900/60 border border-emerald-400/25 hover:border-emerald-400/50 flex items-center gap-3 text-xs sm:text-sm text-white transition-all duration-200 hover:translate-x-1">
-                  <span class="w-6 h-6 rounded-full bg-emerald-400/20 text-emerald-300 flex items-center justify-center text-xs font-bold shrink-0 shadow-sm">✓</span>
-                  <span class="font-medium text-emerald-50">Vos données ne sont jamais mutualisées</span>
-                </div>
-                <div class="p-3 rounded-xl bg-emerald-950/60 hover:bg-emerald-900/60 border border-emerald-400/25 hover:border-emerald-400/50 flex items-center gap-3 text-xs sm:text-sm text-white transition-all duration-200 hover:translate-x-1">
-                  <span class="w-6 h-6 rounded-full bg-emerald-400/20 text-emerald-300 flex items-center justify-center text-xs font-bold shrink-0 shadow-sm">✓</span>
-                  <span class="font-medium text-emerald-50">Aucun accès administratif non autorisé</span>
-                </div>
-                <div class="p-3 rounded-xl bg-emerald-950/60 hover:bg-emerald-900/60 border border-emerald-400/25 hover:border-emerald-400/50 flex items-center gap-3 text-xs sm:text-sm text-white transition-all duration-200 hover:translate-x-1">
-                  <span class="w-6 h-6 rounded-full bg-emerald-400/20 text-emerald-300 flex items-center justify-center text-xs font-bold shrink-0 shadow-sm">✓</span>
-                  <span class="font-medium text-emerald-50">Suppression définitive sur simple demande</span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- GRILLE DES 4 CASES SPÉCIALISÉES (Disposition 4 colonnes, chacune animée) -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            
-            <!-- Case 1 : Invisibilité totale -->
-            <div class="group rounded-[1.8rem] bg-[#072d24]/90 hover:bg-[#09362b] border border-emerald-400/30 hover:border-emerald-400 p-5 sm:p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(16,185,129,0.3)] flex flex-col justify-between relative overflow-hidden">
-              <div>
-                <div class="w-11 h-11 rounded-xl bg-indigo-500/25 border border-indigo-400/40 text-indigo-300 flex items-center justify-center font-bold mb-4 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                  <span class="material-symbols-outlined text-[22px]">visibility_off</span>
-                </div>
-                <h4 class="text-base font-bold font-title text-white mb-2">Invisibilité totale</h4>
-                <p class="text-xs sm:text-[13px] text-emerald-100 font-normal leading-relaxed">
-                  Aucun autre utilisateur ne peut détecter, consulter ou soupçonner l'existence de vos dossiers. Votre espace est étanche et invisible au reste du monde.
-                </p>
-              </div>
-              <div class="mt-4 pt-3 border-t border-emerald-800/40 flex items-center gap-2 text-[11px] text-emerald-300 font-medium">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                <span>Isolation réseau stricte</span>
-              </div>
-            </div>
-
-            <!-- Case 2 : Authentification stricte -->
-            <div class="group rounded-[1.8rem] bg-[#072d24]/90 hover:bg-[#09362b] border border-emerald-400/30 hover:border-emerald-400 p-5 sm:p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(16,185,129,0.3)] flex flex-col justify-between relative overflow-hidden">
-              <div>
-                <div class="w-11 h-11 rounded-xl bg-amber-500/25 border border-amber-400/40 text-amber-300 flex items-center justify-center font-bold mb-4 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                  <span class="material-symbols-outlined text-[22px]">key</span>
-                </div>
-                <h4 class="text-base font-bold font-title text-white mb-2">Authentification stricte</h4>
-                <p class="text-xs sm:text-[13px] text-emerald-100 font-normal leading-relaxed">
-                  Accès protégé par des protocoles chiffrés et des sessions temporisées. Sans identifiants vérifiés, toute tentative d'intrusion est bloquée net.
-                </p>
-              </div>
-              <div class="mt-4 pt-3 border-t border-emerald-800/40 flex items-center gap-2 text-[11px] text-amber-300 font-medium">
-                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                <span>Sessions infalsifiables</span>
-              </div>
-            </div>
-
-            <!-- Case 3 : Données chiffrées -->
-            <div class="group rounded-[1.8rem] bg-[#072d24]/90 hover:bg-[#09362b] border border-emerald-400/30 hover:border-emerald-400 p-5 sm:p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(16,185,129,0.3)] flex flex-col justify-between relative overflow-hidden">
-              <div>
-                <div class="w-11 h-11 rounded-xl bg-teal-400/25 border border-teal-400/40 text-teal-200 flex items-center justify-center font-bold mb-4 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                  <span class="material-symbols-outlined text-[22px]">database</span>
-                </div>
-                <h4 class="text-base font-bold font-title text-white mb-2">Données chiffrées</h4>
-                <p class="text-xs sm:text-[13px] text-emerald-100 font-normal leading-relaxed">
-                  Toutes vos pièces sensibles (passeports, reçus, visas) transitent et dorment sous chiffrement AES-256. Aucune information ne circule en clair.
-                </p>
-              </div>
-              <div class="mt-4 pt-3 border-t border-emerald-800/40 flex items-center gap-2 text-[11px] text-teal-200 font-medium">
-                <span class="w-1.5 h-1.5 rounded-full bg-teal-300"></span>
-                <span>Chiffrement AES-256</span>
-              </div>
-            </div>
-
-            <!-- Case 4 : Zéro partage, zéro revente -->
-            <div class="group rounded-[1.8rem] bg-[#072d24]/90 hover:bg-[#09362b] border border-emerald-400/30 hover:border-emerald-400 p-5 sm:p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(16,185,129,0.3)] flex flex-col justify-between relative overflow-hidden">
-              <div>
-                <div class="w-11 h-11 rounded-xl bg-emerald-400/25 border border-emerald-400/40 text-emerald-300 flex items-center justify-center font-bold mb-4 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                  <span class="material-symbols-outlined text-[22px]">verified_user</span>
-                </div>
-                <h4 class="text-base font-bold font-title text-white mb-2">Zéro partage, zéro revente</h4>
-                <p class="text-xs sm:text-[13px] text-emerald-100 font-normal leading-relaxed">
-                  Vos bases clients ne font l'objet d'aucun profilage commercial ni partage tiers. Ce que vous renseignez appartient exclusivement à votre agence.
-                </p>
-              </div>
-              <div class="mt-4 pt-3 border-t border-emerald-800/40 flex items-center gap-2 text-[11px] text-emerald-300 font-medium">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                <span>Propriété 100% agence</span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- BANDEAU INFÉRIEUR : Engagement ferme + Badge vert (animé au survol) -->
-          <div class="group p-5 sm:p-6 rounded-[2rem] bg-[#05261e]/90 hover:bg-[#073026] border border-emerald-400/40 hover:border-emerald-400 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-            <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-emerald-400/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center font-bold shrink-0 group-hover:scale-110 transition-transform">
-                <span class="material-symbols-outlined text-[20px]">verified</span>
-              </div>
-              <div class="text-emerald-100 leading-relaxed text-xs sm:text-[13px]">
-                <strong class="text-white font-bold">Engagement ferme :</strong> seul le titulaire du compte peut lire, modifier ou supprimer ses données. Cette règle est gravée dans notre architecture système — elle ne souffre d'aucune exception.
-              </div>
-            </div>
-            <div class="shrink-0 flex items-center self-start sm:self-auto">
-              <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/90 border border-emerald-400/60 text-emerald-300 font-bold text-xs shadow-inner group-hover:bg-emerald-800/90 transition-colors">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>Confidentiel & Sécurisé</span>
-              </span>
-            </div>
-          </div>
-
-        </div>
-
       </div>
     </section>
 
@@ -2109,21 +2135,21 @@
               <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
                 <span class="text-xs font-semibold text-slate-500">Total Encaissé Clients</span>
                 <div class="my-2">
-                  <span id="stat-total-paid" class="text-2xl font-extrabold text-emerald-600 font-mono">14 850 000 FCFA</span>
+                  <span id="stat-total-paid" class="font-editorial text-2xl sm:text-3xl font-bold text-emerald-600">14 850 000 FCFA</span>
                 </div>
                 <span id="stat-total-paid-sub" class="text-[11px] font-medium text-slate-400">Période : Tous les mois comptabilisés</span>
               </div>
               <div class="p-5 rounded-2xl bg-amber-50/80 border border-amber-200 shadow-sm">
                 <span class="text-xs font-semibold text-amber-800">Soldes Restants à Recouvrer</span>
                 <div class="my-2">
-                  <span id="stat-remaining-paid" class="text-2xl font-extrabold text-amber-900 font-mono">3 550 000 FCFA</span>
+                  <span id="stat-remaining-paid" class="font-editorial text-2xl sm:text-3xl font-bold text-amber-900">3 550 000 FCFA</span>
                 </div>
                 <span class="text-[11px] font-medium text-amber-700">Délai moyen J-5 avant départ</span>
               </div>
               <div class="p-5 rounded-2xl bg-teal-50 border border-teal-100 shadow-sm">
                 <span class="text-xs font-semibold text-slate-500">Taux de Recouvrement</span>
                 <div class="my-2">
-                  <span id="stat-recovery-rate" class="text-2xl font-extrabold text-tukki-teal font-mono">81 %</span>
+                  <span id="stat-recovery-rate" class="font-editorial text-2xl sm:text-3xl font-bold text-tukki-teal">81 %</span>
                 </div>
                 <div class="w-full bg-teal-200/50 rounded-full h-1.5 mt-1 overflow-hidden">
                   <div id="stat-recovery-bar" class="bg-tukki-teal h-1.5 rounded-full" style="width: 81%"></div>
@@ -2132,7 +2158,7 @@
               <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm">
                 <span class="text-xs font-semibold text-slate-500">Règlements du Jour</span>
                 <div class="my-2">
-                  <span class="text-2xl font-extrabold text-slate-800 font-mono">1 650 000 FCFA</span>
+                  <span class="font-editorial text-2xl sm:text-3xl font-bold text-slate-800">1 650 000 FCFA</span>
                 </div>
                 <span class="text-[11px] font-medium text-emerald-600">● 3 encaissements aujourd'hui</span>
               </div>
@@ -2428,28 +2454,28 @@
               <div class="p-5 rounded-2xl bg-white border border-rose-200/80 shadow-sm">
                 <span class="text-xs font-semibold text-slate-500">Total Dépenses Agence</span>
                 <div class="my-2">
-                  <span id="stat-total-expenses" class="text-2xl font-extrabold text-rose-700 font-mono">4 250 000 FCFA</span>
+                  <span id="stat-total-expenses" class="font-editorial text-2xl sm:text-3xl font-bold text-rose-700">4 250 000 FCFA</span>
                 </div>
                 <span id="stat-total-expenses-sub" class="text-[11px] font-medium text-slate-400">Total cumulé charges payées</span>
               </div>
               <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm">
                 <span class="text-xs font-semibold text-slate-600">Salaires & Commissions Conseillers</span>
                 <div class="my-2">
-                  <span id="stat-salaries-expenses" class="text-2xl font-extrabold text-slate-800 font-mono">2 100 000 FCFA</span>
+                  <span id="stat-salaries-expenses" class="font-editorial text-2xl sm:text-3xl font-bold text-slate-800">2 100 000 FCFA</span>
                 </div>
                 <span class="text-[11px] font-medium text-slate-500">4 billettistes & conseillers</span>
               </div>
               <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm">
                 <span class="text-xs font-semibold text-slate-600">Locaux, Énergie & Télécoms</span>
                 <div class="my-2">
-                  <span id="stat-rent-expenses" class="text-2xl font-extrabold text-slate-800 font-mono">1 250 000 FCFA</span>
+                  <span id="stat-rent-expenses" class="font-editorial text-2xl sm:text-3xl font-bold text-slate-800">1 250 000 FCFA</span>
                 </div>
                 <span class="text-[11px] font-medium text-slate-500">Loyer Dakar, Sonatel, Senelec</span>
               </div>
               <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm">
                 <span class="text-xs font-semibold text-slate-600">GDS Amadeus, BSP & Logiciels</span>
                 <div class="my-2">
-                  <span id="stat-gds-expenses" class="text-2xl font-extrabold text-slate-800 font-mono">900 000 FCFA</span>
+                  <span id="stat-gds-expenses" class="font-editorial text-2xl sm:text-3xl font-bold text-slate-800">900 000 FCFA</span>
                 </div>
                 <span class="text-[11px] font-medium text-emerald-600">● Liaisons & Licences IATA</span>
               </div>
@@ -2685,7 +2711,7 @@
                 <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
                   <span class="text-xs font-semibold text-slate-500">1. Chiffre d'Affaires Encaissé</span>
                   <div class="my-2">
-                    <span id="bilan-revenue" class="text-2xl font-extrabold text-slate-900 font-mono">6 600 000 FCFA</span>
+                    <span id="bilan-revenue" class="font-editorial text-2xl sm:text-3xl font-bold text-slate-900">6 600 000 FCFA</span>
                   </div>
                   <span class="text-[11px] text-emerald-600 font-medium">Recettes clients perçues</span>
                 </div>
@@ -2693,7 +2719,7 @@
                 <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
                   <span class="text-xs font-semibold text-slate-500">2. Coût Direct Billetterie</span>
                   <div class="my-2">
-                    <span id="bilan-direct-costs" class="text-2xl font-extrabold text-slate-700 font-mono">3 400 000 FCFA</span>
+                    <span id="bilan-direct-costs" class="font-editorial text-2xl sm:text-3xl font-bold text-slate-700">3 400 000 FCFA</span>
                   </div>
                   <span class="text-[11px] text-slate-400">Reversements Compagnies/BSP</span>
                 </div>
@@ -2701,7 +2727,7 @@
                 <div class="p-5 rounded-2xl bg-rose-50/60 border border-rose-200">
                   <span class="text-xs font-semibold text-rose-800">3. Dépenses d'Exploitation</span>
                   <div class="my-2">
-                    <span id="bilan-expenses" class="text-2xl font-extrabold text-rose-700 font-mono">2 450 000 FCFA</span>
+                    <span id="bilan-expenses" class="font-editorial text-2xl sm:text-3xl font-bold text-rose-700">2 450 000 FCFA</span>
                   </div>
                   <span class="text-[11px] text-rose-600 font-medium">Salaires, Loyer, GDS, Charges</span>
                 </div>
@@ -2709,7 +2735,7 @@
                 <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-200">
                   <span class="text-xs font-semibold text-emerald-800">4. Marge Nette Réalisée</span>
                   <div class="my-2">
-                    <span id="bilan-net-margin" class="text-2xl font-extrabold text-emerald-700 font-mono">+ 750 000 FCFA</span>
+                    <span id="bilan-net-margin" class="font-editorial text-2xl sm:text-3xl font-bold text-emerald-700">+ 750 000 FCFA</span>
                   </div>
                   <span id="bilan-net-rate" class="text-[11px] text-emerald-700 font-bold">Rentabilité : 22.8 %</span>
                 </div>
@@ -2778,25 +2804,25 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div class="p-5 rounded-3xl bg-white border border-slate-200/80 shadow-xs">
                 <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">Chiffre d'Affaires</span>
-                <span id="stats-total-ca" class="text-2xl font-extrabold text-slate-900 font-mono block mt-1">14 850 000 FCFA</span>
+                <span id="stats-total-ca" class="font-editorial text-2xl sm:text-3xl font-bold text-slate-900 block mt-1">14 850 000 FCFA</span>
                 <span class="text-[10px] text-emerald-600 font-semibold block mt-0.5">● Recouvrement 81% de l'objectif</span>
               </div>
 
               <div class="p-5 rounded-3xl bg-white border border-slate-200/80 shadow-xs">
                 <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">Charges d'Exploitation</span>
-                <span id="stats-total-dep" class="text-2xl font-extrabold text-rose-700 font-mono block mt-1">4 250 000 FCFA</span>
+                <span id="stats-total-dep" class="font-editorial text-2xl sm:text-3xl font-bold text-rose-700 block mt-1">4 250 000 FCFA</span>
                 <span class="text-[10px] text-slate-400 font-medium block mt-0.5">Loyer, salaires, liaisons GDS</span>
               </div>
 
               <div class="p-5 rounded-3xl bg-teal-50 border border-teal-200 shadow-xs">
                 <span class="text-[10px] uppercase font-bold text-tukki-teal tracking-wider block">Marge Opérationnelle</span>
-                <span id="stats-total-marge" class="text-2xl font-extrabold text-teal-900 font-mono block mt-1">+2 350 000 FCFA</span>
+                <span id="stats-total-marge" class="font-editorial text-2xl sm:text-3xl font-bold text-teal-900 block mt-1">+2 350 000 FCFA</span>
                 <span class="text-[10px] text-teal-700 font-bold block mt-0.5">Rentabilité nette : 35.6 %</span>
               </div>
 
               <div class="p-5 rounded-3xl bg-purple-50 border border-purple-200 shadow-xs">
                 <span class="text-[10px] uppercase font-bold text-purple-700 tracking-wider block">Canal N°1 de Règlements</span>
-                <span class="text-2xl font-extrabold text-purple-950 font-title block mt-1">Wave & Virement</span>
+                <span class="font-editorial text-2xl sm:text-3xl font-bold text-purple-950 block mt-1">Wave & Virement</span>
                 <span class="text-[10px] text-purple-800 font-medium block mt-0.5">72% des flux sans espèces</span>
               </div>
             </div>
@@ -3125,7 +3151,7 @@
             <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
               <span class="text-[10px] uppercase font-bold text-slate-400 block">Candidats</span>
               <div class="my-1">
-                <span id="kpi-student-total" class="text-2xl font-extrabold text-slate-900 font-mono">6</span>
+                <span id="kpi-student-total" class="font-editorial text-3xl font-bold text-slate-900">6</span>
               </div>
               <span class="text-[10px] text-slate-400 block">étudiants enregistrés</span>
             </div>
@@ -3133,7 +3159,7 @@
             <div class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200 shadow-xs">
               <span class="text-[10px] uppercase font-bold text-amber-700 block">Dossiers actifs</span>
               <div class="my-1">
-                <span id="kpi-student-active" class="text-2xl font-extrabold text-amber-900 font-mono">6</span>
+                <span id="kpi-student-active" class="font-editorial text-3xl font-bold text-amber-900">6</span>
               </div>
               <span class="text-[10px] text-amber-700 block">en préparation / cours</span>
             </div>
@@ -3141,7 +3167,7 @@
             <div class="p-4 rounded-2xl bg-indigo-50/80 border border-indigo-200 shadow-xs">
               <span class="text-[10px] uppercase font-bold text-indigo-700 block">Admissions</span>
               <div class="my-1">
-                <span id="kpi-student-admissions" class="text-2xl font-extrabold text-indigo-900 font-mono">4</span>
+                <span id="kpi-student-admissions" class="font-editorial text-3xl font-bold text-indigo-900">4</span>
               </div>
               <span class="text-[10px] text-indigo-700 block">offres universitaires</span>
             </div>
@@ -3149,7 +3175,7 @@
             <div class="p-4 rounded-2xl bg-purple-50/80 border border-purple-200 shadow-xs">
               <span class="text-[10px] uppercase font-bold text-purple-700 block">Visas en cours</span>
               <div class="my-1">
-                <span id="kpi-student-visas-prog" class="text-2xl font-extrabold text-purple-900 font-mono">3</span>
+                <span id="kpi-student-visas-prog" class="font-editorial text-3xl font-bold text-purple-900">3</span>
               </div>
               <span class="text-[10px] text-purple-700 block">dépôt & consulats</span>
             </div>
@@ -3157,7 +3183,7 @@
             <div class="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200 shadow-xs">
               <span class="text-[10px] uppercase font-bold text-emerald-700 block">Visas obtenus</span>
               <div class="my-1">
-                <span id="kpi-student-visas-obt" class="text-2xl font-extrabold text-emerald-900 font-mono">2</span>
+                <span id="kpi-student-visas-obt" class="font-editorial text-3xl font-bold text-emerald-900">2</span>
               </div>
               <span class="text-[10px] text-emerald-700 block">acceptés avec succès</span>
             </div>
@@ -3165,7 +3191,7 @@
             <div class="p-4 rounded-2xl bg-rose-50/80 border border-rose-200 shadow-xs">
               <span class="text-[10px] uppercase font-bold text-rose-700 block">Actions requises</span>
               <div class="my-1">
-                <span id="kpi-student-actions" class="text-2xl font-extrabold text-rose-900 font-mono">3</span>
+                <span id="kpi-student-actions" class="font-editorial text-3xl font-bold text-rose-900">3</span>
               </div>
               <span class="text-[10px] text-rose-700 block">pièces ou relances</span>
             </div>
