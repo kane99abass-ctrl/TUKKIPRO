@@ -206,6 +206,21 @@
     .modal-box {
       transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
+    /* Scrollbar ultra fine et élégante pour la sidebar agence */
+    .sidebar-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .sidebar-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .sidebar-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(15, 118, 110, 0.2);
+      border-radius: 9999px;
+    }
+    .sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(15, 118, 110, 0.4);
+    }
   </style>
 </head>
 <body class="selection:bg-teal-200 selection:text-teal-900">
@@ -1161,126 +1176,127 @@
       </div>
 
       <!-- CONTENU SIDEBAR AU-DESSUS DU FOND (Z-10) -->
-      <div class="relative z-10 flex flex-col h-full justify-between">
-        <div>
-          <!-- Header Sidebar & Logo -->
-          <div class="p-5 border-b border-slate-100/80">
-            <a href="#/app" onclick="navigateToRoute('/app')" class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-tukki-teal to-emerald-500 flex items-center justify-center text-white font-bold text-lg shadow-sm">
-                <span class="material-symbols-outlined text-[20px]">flight_takeoff</span>
-              </div>
-              <div>
-                <span class="font-bold text-lg tracking-tight text-slate-900 block leading-tight font-title">
-                  Tukki<span class="text-tukki-gold">Pro</span>
-                </span>
-                <span class="text-[10px] text-slate-400 font-medium">Espace Agence B2B</span>
-              </div>
-            </a>
-
-            <!-- Badge Multi-Tenant -->
-            <div class="mt-4 p-2.5 rounded-xl bg-white/85 backdrop-blur-sm border border-slate-200/70 flex items-center justify-between shadow-2xs">
-              <div class="truncate">
-                <span id="sidebar-agency-name" class="text-[11px] font-bold text-slate-800 block truncate">Teranga Voyages Dakar</span>
-                <span class="text-[10px] text-emerald-700 font-medium">● Formule Pro</span>
-              </div>
-              <span class="text-[10px] px-2 py-0.5 rounded-md bg-teal-50 text-tukki-teal font-bold border border-teal-200/60 font-mono">
-                FCFA
-              </span>
+      <div class="relative z-10 flex flex-col h-full min-h-0">
+        
+        <!-- 1. EN-TÊTE FIXE (Logo & Agence) -->
+        <div class="p-4 sm:p-5 border-b border-slate-100/80 shrink-0">
+          <a href="#/app" onclick="navigateToRoute('/app')" class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-tukki-teal to-emerald-500 flex items-center justify-center text-white font-bold text-lg shadow-sm">
+              <span class="material-symbols-outlined text-[20px]">flight_takeoff</span>
             </div>
-          </div>
+            <div>
+              <span class="font-bold text-lg tracking-tight text-slate-900 block leading-tight font-title">
+                Tukki<span class="text-tukki-gold">Pro</span>
+              </span>
+              <span class="text-[10px] text-slate-400 font-medium">Espace Agence B2B</span>
+            </div>
+          </a>
 
+          <!-- Badge Multi-Tenant -->
+          <div class="mt-3 p-2 rounded-xl bg-white/85 backdrop-blur-sm border border-slate-200/70 flex items-center justify-between shadow-2xs">
+            <div class="truncate">
+              <span id="sidebar-agency-name" class="text-[11px] font-bold text-slate-800 block truncate">Teranga Voyages Dakar</span>
+              <span class="text-[10px] text-emerald-700 font-medium">● Formule Pro</span>
+            </div>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-teal-50 text-tukki-teal font-bold border border-teal-200/60 font-mono">
+              FCFA
+            </span>
+          </div>
+        </div>
+
+        <!-- 2. ZONE CENTRALE DÉFILABLE (Navigation & Widget Pro) -->
+        <div class="flex-1 min-h-0 overflow-y-auto p-3 space-y-3 sidebar-scrollbar">
           <!-- Navigation Sidebar avec icônes vectorielles épurées -->
-          <nav class="p-3 space-y-1 text-xs font-semibold">
-            <button onclick="switchAgencySection('dashboard')" id="nav-dashboard" class="agency-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-tukki-teal text-white shadow-sm transition-all cursor-pointer">
+          <nav class="space-y-0.5 text-xs font-semibold">
+            <button onclick="switchAgencySection('dashboard')" id="nav-dashboard" class="agency-nav-btn w-full flex items-center justify-between px-3 py-2 rounded-xl bg-tukki-teal text-white shadow-sm transition-all cursor-pointer">
               <span class="flex items-center gap-2.5">
                 <span class="material-symbols-outlined text-[18px]">dashboard</span>
                 <span>Dashboard</span>
               </span>
             </button>
-            <button onclick="switchAgencySection('dossiers')" id="nav-dossiers" class="agency-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
+            <button onclick="switchAgencySection('dossiers')" id="nav-dossiers" class="agency-nav-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
               <span class="flex items-center gap-2.5">
                 <span class="material-symbols-outlined text-[18px]">folder_open</span>
                 <span>Dossiers de voyage</span>
               </span>
               <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 font-bold">48</span>
             </button>
-            <button onclick="switchAgencySection('clients')" id="nav-clients" class="agency-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
+            <button onclick="switchAgencySection('clients')" id="nav-clients" class="agency-nav-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
               <span class="flex items-center gap-2.5">
                 <span class="material-symbols-outlined text-[18px]">groups</span>
                 <span>Clients & Passagers</span>
               </span>
               <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 font-bold">184</span>
             </button>
-            <button onclick="switchAgencySection('visas')" id="nav-visas" class="agency-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
+            <button onclick="switchAgencySection('visas')" id="nav-visas" class="agency-nav-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
               <span class="flex items-center gap-2.5">
                 <span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
                 <span>Visas & Consulats</span>
               </span>
               <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold">3 en cours</span>
             </button>
-            <button onclick="switchAgencySection('student-visas')" id="nav-student-visas" class="agency-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
+            <button onclick="switchAgencySection('student-visas')" id="nav-student-visas" class="agency-nav-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
               <span class="flex items-center gap-2.5">
                 <span class="material-symbols-outlined text-[18px]">school</span>
                 <span>Visas étudiants</span>
               </span>
               <span id="sidebar-student-badge" class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold">6 actifs</span>
             </button>
-            <button onclick="switchAgencySection('paiements')" id="nav-paiements" class="agency-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
+            <button onclick="switchAgencySection('paiements')" id="nav-paiements" class="agency-nav-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
               <span class="flex items-center gap-2.5">
                 <span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
                 <span>Comptabilité & Paiements</span>
               </span>
             </button>
-            <button onclick="switchAgencySection('documents')" id="nav-documents" class="agency-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
+            <button onclick="switchAgencySection('documents')" id="nav-documents" class="agency-nav-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
               <span class="flex items-center gap-2.5">
                 <span class="material-symbols-outlined text-[18px]">description</span>
                 <span>Documents & Billets</span>
               </span>
             </button>
-            <button onclick="switchAgencySection('notifications')" id="nav-notifications" class="agency-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
+            <button onclick="switchAgencySection('notifications')" id="nav-notifications" class="agency-nav-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
               <span class="flex items-center gap-2.5">
                 <span class="material-symbols-outlined text-[18px]">notifications</span>
                 <span>Notifications</span>
               </span>
               <span class="text-[10px] px-2 py-0.5 rounded-full bg-rose-100 text-rose-700 font-bold">4</span>
             </button>
-            <button onclick="switchAgencySection('equipe')" id="nav-equipe" class="agency-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
+            <button onclick="switchAgencySection('equipe')" id="nav-equipe" class="agency-nav-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
               <span class="flex items-center gap-2.5">
                 <span class="material-symbols-outlined text-[18px]">badge</span>
                 <span>Équipe & Agents</span>
               </span>
             </button>
-            <button onclick="switchAgencySection('parametres')" id="nav-parametres" class="agency-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
+            <button onclick="switchAgencySection('parametres')" id="nav-parametres" class="agency-nav-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100/90 transition-all cursor-pointer">
               <span class="flex items-center gap-2.5">
                 <span class="material-symbols-outlined text-[18px]">settings</span>
                 <span>Paramètres Agence</span>
               </span>
             </button>
           </nav>
-        </div>
 
-        <!-- Bas de sidebar avec widget promo CarryFlow "Power Up Your Dashboard" & Profil -->
-        <div class="p-3 border-t border-slate-100/80 space-y-3">
-          <!-- Widget CarryFlow "Boostez Votre Agence" -->
-          <div class="luminous-mesh-sidebar p-4 rounded-2xl relative overflow-hidden group">
+          <!-- Widget CarryFlow "Boostez Votre Agence" (défilable) -->
+          <div class="luminous-mesh-sidebar p-3.5 rounded-2xl relative overflow-hidden group">
             <div class="relative z-10">
-              <div class="flex items-center justify-between mb-1.5">
+              <div class="flex items-center justify-between mb-1">
                 <span class="text-[10px] font-bold uppercase tracking-wider text-teal-900 bg-white/70 px-2 py-0.5 rounded-full shadow-2xs">
                   Pro Engine
                 </span>
-                <span class="material-symbols-outlined text-teal-800 text-[18px]">bolt</span>
+                <span class="material-symbols-outlined text-teal-800 text-[16px]">bolt</span>
               </div>
               <h4 class="font-editorial text-sm font-bold text-slate-900 leading-snug">Boostez votre agence</h4>
-              <p class="text-[11px] text-slate-700 mt-1 font-normal leading-snug">GDS direct, alertes WhatsApp automatiques & visas prioritaires.</p>
-              <button onclick="switchAgencySection('parametres')" class="mt-2.5 w-full py-1.5 px-3 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-[11px] font-bold shadow-xs transition-transform active:scale-95 flex items-center justify-center gap-1 cursor-pointer">
+              <p class="text-[11px] text-slate-700 mt-0.5 font-normal leading-snug">GDS direct, alertes WhatsApp automatiques & visas prioritaires.</p>
+              <button onclick="switchAgencySection('parametres')" class="mt-2 w-full py-1.5 px-3 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-[11px] font-bold shadow-xs transition-transform active:scale-95 flex items-center justify-center gap-1 cursor-pointer">
                 <span>Passer en Formule Pro</span>
                 <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
               </button>
             </div>
           </div>
+        </div>
 
-          <!-- Profil Amadou Diallo -->
-          <div class="p-2.5 rounded-xl bg-white/85 backdrop-blur-sm border border-slate-200/70 flex items-center justify-between shadow-2xs">
+        <!-- 3. BAS FIXE TOUJOURS VISIBLE (Profil & Déconnexion) -->
+        <div class="p-3 border-t border-slate-100/90 bg-white/95 backdrop-blur-sm shrink-0">
+          <div class="p-2 rounded-xl bg-slate-50/90 border border-slate-200/70 flex items-center justify-between shadow-2xs">
             <div class="flex items-center gap-2 min-w-0">
               <div class="w-8 h-8 rounded-full bg-teal-100 text-tukki-teal font-bold text-xs flex items-center justify-center shrink-0">
                 AD
@@ -1295,6 +1311,7 @@
             </button>
           </div>
         </div>
+
       </div>
     </aside>
 

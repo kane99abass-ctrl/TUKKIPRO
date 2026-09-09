@@ -182,7 +182,7 @@ export function DataProvider({ children }) {
           notes: d.notes,
           passengers: paxList.map(p => ({ id: p.id, name: p.name, passport: p.passport, role: p.role })),
           payments: payList.map(p => ({
-            id: p.receipt_ref,
+            id: p.receipt_ref || p.id,
             dbId: p.id,
             dossierId: d.ref_code,
             amount: formatMoney(Number(p.amount)),
@@ -224,7 +224,7 @@ export function DataProvider({ children }) {
         const dMatch = dossiersData?.find(d => d.id === p.dossier_id);
         const cMatch = mappedClients.find(c => c.id === p.client_id) || mappedClients.find(c => c.id === dMatch?.client_id);
         return {
-          id: p.receipt_ref,
+          id: p.receipt_ref || p.id,
           dbId: p.id,
           dossierId: dMatch?.ref_code || '',
           dossier: dMatch ? `#${dMatch.ref_code} (${dMatch.route})` : 'Paiement direct',

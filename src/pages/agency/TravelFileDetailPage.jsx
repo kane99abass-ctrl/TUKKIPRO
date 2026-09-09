@@ -45,8 +45,8 @@ export default function TravelFileDetailPage() {
     setTimeout(() => setToastMessage(null), 3500);
   };
 
-  // Récupération du dossier correspondant à l'ID
-  const dossier = dossiers.find(d => d.id === id);
+  // Récupération du dossier correspondant à l'ID (ref_code ou UUID)
+  const dossier = dossiers.find(d => d.id === id || d.dbId === id);
 
   if (!dossier) {
     return (

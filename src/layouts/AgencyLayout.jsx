@@ -159,58 +159,58 @@ export default function AgencyLayout() {
           </div>
         </div>
 
-        {/* Navigation principale */}
-        <nav className="flex-1 p-3 space-y-1 overflow-y-auto">
-          {navItems.map((item) => {
-            const isActive = item.exact 
-              ? location.pathname === item.path 
-              : location.pathname.startsWith(item.path);
+        {/* Zone centrale défilable : Navigation & Widget Pro */}
+        <div className="flex-1 min-h-0 overflow-y-auto p-3 space-y-3">
+          <nav className="space-y-0.5">
+            {navItems.map((item) => {
+              const isActive = item.exact 
+                ? location.pathname === item.path 
+                : location.pathname.startsWith(item.path);
 
-            return (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all ${
-                  isActive
-                    ? 'bg-[#0F766E] text-white shadow-sm'
-                    : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <span className={isActive ? 'text-white' : 'text-slate-400'}>
-                    {item.icon}
-                  </span>
-                  <span>{item.label}</span>
-                </div>
+              return (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className={`flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold transition-all ${
+                    isActive
+                      ? 'bg-[#0F766E] text-white shadow-sm'
+                      : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                  }`}
+                >
+                  <div className="flex items-center gap-2.5">
+                    <span className={isActive ? 'text-white' : 'text-slate-400'}>
+                      {item.icon}
+                    </span>
+                    <span>{item.label}</span>
+                  </div>
 
-                {item.badge && (
-                  <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
-                    isActive 
-                      ? 'bg-white/20 text-white' 
-                      : item.badgeColor || 'bg-slate-100 text-slate-600'
-                  }`}>
-                    {item.badge}
-                  </span>
-                )}
-              </NavLink>
-            );
-          })}
-        </nav>
+                  {item.badge && (
+                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                      isActive 
+                        ? 'bg-white/20 text-white' 
+                        : item.badgeColor || 'bg-slate-100 text-slate-600'
+                    }`}>
+                      {item.badge}
+                    </span>
+                  )}
+                </NavLink>
+              );
+            })}
+          </nav>
 
-        {/* Widget CarryFlow "Boostez votre agence" */}
-        <div className="p-3">
-          <div className="p-4 rounded-2xl bg-gradient-to-br from-lime-50 via-yellow-50 to-teal-50 border border-teal-200/60 shadow-xs relative overflow-hidden">
-            <div className="flex items-center justify-between mb-1.5">
+          {/* Widget CarryFlow "Boostez votre agence" (défilable) */}
+          <div className="p-3.5 rounded-2xl bg-gradient-to-br from-lime-50 via-yellow-50 to-teal-50 border border-teal-200/60 shadow-xs relative overflow-hidden">
+            <div className="flex items-center justify-between mb-1">
               <span className="text-[10px] font-bold uppercase tracking-wider text-teal-900 bg-white/80 px-2 py-0.5 rounded-full">
                 Pro Engine
               </span>
               <span className="text-teal-700 text-xs font-bold">⚡</span>
             </div>
             <h4 className="font-serif text-sm font-bold text-slate-900 leading-snug">Boostez votre agence</h4>
-            <p className="text-[11px] text-slate-600 mt-1 leading-snug">GDS direct, alertes WhatsApp et visas prioritaires.</p>
+            <p className="text-[11px] text-slate-600 mt-0.5 leading-snug">GDS direct, alertes WhatsApp et visas prioritaires.</p>
             <Link
               to="/app/parametres"
-              className="mt-2.5 w-full py-1.5 px-3 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-[11px] font-bold shadow-xs flex items-center justify-center gap-1 transition-all"
+              className="mt-2 w-full py-1.5 px-3 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-[11px] font-bold shadow-xs flex items-center justify-center gap-1 transition-all"
             >
               <span>Passer en Formule Pro</span>
               <span>→</span>
@@ -218,9 +218,9 @@ export default function AgencyLayout() {
           </div>
         </div>
 
-        {/* Footer Sidebar : Utilisateur & Déconnexion */}
-        <div className="p-3 border-t border-slate-100">
-          <div className="p-2.5 rounded-xl bg-slate-50 flex items-center justify-between">
+        {/* Footer Sidebar : Utilisateur & Déconnexion (Toujours visible et fixé en bas) */}
+        <div className="p-3 border-t border-slate-100 shrink-0 bg-white/95 backdrop-blur-sm">
+          <div className="p-2.5 rounded-xl bg-slate-50 flex items-center justify-between shadow-2xs">
             <div className="flex items-center gap-2.5 min-w-0">
               <div className="w-8 h-8 rounded-full bg-teal-100 text-[#0F766E] font-bold text-xs flex items-center justify-center shrink-0">
                 {user.fullName.substring(0, 2).toUpperCase()}

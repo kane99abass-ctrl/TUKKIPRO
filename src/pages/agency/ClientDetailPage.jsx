@@ -7,7 +7,7 @@ export default function ClientDetailPage() {
   const { id } = useParams();
   const { clients, dossiers, updateClient } = useData();
 
-  const client = clients.find(c => c.id === id);
+  const client = clients.find(c => c.id === id || c.code === id);
 
   // Edit modal
   const [isEditOpen, setIsEditOpen] = useState(false);
